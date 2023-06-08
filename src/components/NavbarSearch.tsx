@@ -131,7 +131,7 @@ const useStyles = createStyles((theme) => ({
 
 const links = [
   { label: "Home", path: "/app/Home" },
-  { label: "Settings", path: "/app/settings" },
+  { label: "Test", path: "/app/settings" },
   { label: "Profile", path: "/app/Profile" },
   { label: "Messages", notifications: 4, path: "/app/Messages" },
   { label: "Sells", notifications: 1, path: "/login" },
