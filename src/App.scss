@@ -1,20 +1,41 @@
-@use 'assets/styles';
-@use '@gear-js/ui/variables' as *;
+@use "assets/styles";
+@use "@gear-js/ui/variables" as *;
 
 #root {
-  max-width: 1200px;
-  min-height: 100vh;
+  max-width: 100%;
+  min-height: 100%;
   margin: 0 auto;
-  padding: 0 16px;
   display: flex;
-  flex-direction: column;
   box-sizing: content-box;
+  background-color: #2d59bf;
 }
 
-main {
+.Grid {
+  overflow: hidden;
+}
+
+.Prototype {
+  margin-top: 30px;
+  align-items: left;
+  height: 420px;
+  display: grid;
+  grid-column-start: 1;
+  margin-left: 10px;
+  width: 350px;
+  margin-left: 17px;
+}
+
+.classesnavbar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  min-width: 300px;
+  border: none;
+}
+
+.MainPage {
   flex: 1;
-  padding: 30px 0 60px;
-  position: relative; // for loaders
+  display: flex;
 }
 
 body {
