@@ -10,8 +10,10 @@ import {
   ActionIcon,
   Tooltip,
   rem,
+  Button,
 } from "@mantine/core";
 
+import "./Navbar.scss";
 import { Account } from "./layout/header/account";
 import { Outlet, useNavigate } from "react-router-dom";
 
@@ -151,6 +153,9 @@ export function NavbarSearch() {
   const { classes } = useStyles();
 
   const navigate = useNavigate();
+  const navigateToLogin = () => {
+    navigate("/login");
+  };
 
   const mainLinks = links.map((link) => (
     <UnstyledButton
@@ -187,13 +192,10 @@ export function NavbarSearch() {
         <Navbar.Section className={classes.section}>
           <Account />
         </Navbar.Section>
-
         <TextInput placeholder="Search" size="xs" mb="sm" />
-
         <Navbar.Section className={classes.section}>
           <div className={classes.mainLinks}>{mainLinks}</div>
         </Navbar.Section>
-
         <Navbar.Section className={classes.section}>
           <Group className={classes.collectionsHeader} position="apart">
             <Text size="xs" weight={500} color="dimmed">
@@ -201,9 +203,10 @@ export function NavbarSearch() {
             </Text>
           </Group>
           <div className={classes.collections}>{collectionLinks}</div>
+          <Button onClick={navigateToLogin} className="SignOut">
+            SignOut
+          </Button>
         </Navbar.Section>
-
-        {/* <button onClick={() => app.auth().signOut()}>Sign Out</button> */}
       </Navbar>
       <Outlet />
     </>
