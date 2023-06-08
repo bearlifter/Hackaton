@@ -4,7 +4,7 @@ import { TotalSupply } from "TotalSupply";
 export default function Settings() {
   return <div>
     
-    <TransferButton to = "12" amount={5}></TransferButton>
+    <TransferButton to = "" amount={5}></TransferButton>
     <TotalSupply></TotalSupply>
   </div>;
 }
